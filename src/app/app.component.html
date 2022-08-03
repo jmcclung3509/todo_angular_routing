@@ -1,0 +1,24 @@
+<div class="main">
+  <h1> To Do List</h1>
+
+
+  <label for="addItemInput">What do you need to do today? </label>
+
+
+  <input #newTodo placeholder="Add a new todo" (keyup.enter)="addItem(newTodo.value); newTodo.value = '' "
+    class="lg-text-input" id="addItemInput" />
+  <button class="add-btn" (click)="addItem(newTodo.value)"> Add Todo</button>
+
+  <h2>{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>
+    <ng-template #elseBlock>items</ng-template>
+  </h2>
+
+  <ul>
+    <li *ngFor="let item of items">
+      <app-todo (remove)="remove(item)" [item]="item"></app-todo>
+
+    </li>
+  </ul>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
