@@ -1,0 +1,49 @@
+.todo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.todo-title {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="checkbox" i] {
+    width: fit-content;
+    font-size: 2rem;
+}
+
+.btn {
+    padding: 7px 13px;
+    border-radius: 4px;
+    margin: 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+}
+
+.btn-edit {
+    background-color: #060359
+}
+
+.btn-delete {
+    background-color: #F2055C
+}
+
+.btn-save {
+    background-color: #91D99C;
+    color: black;
+}
+
+.btn-cancel {
+    background-color: #8dc2f0;
+    color: black;
+}

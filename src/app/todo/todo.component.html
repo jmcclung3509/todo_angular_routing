@@ -1,9 +1,10 @@
 <div class="todo">
-    <input [id]="item.todo" type="checkbox" (change)="item.isDone = !item.isDone" [checked]="item.isDone" />
-    <label [for]="item.todo">{{item.todo}}</label>
+    <input class="checkbox" [id]="item.todo" type="checkbox" (change)="item.isDone = !item.isDone"
+        [checked]="item.isDone" />
+    <label class="todo-title" [for]="item.todo">{{item.todo}}</label>
 
     <div class="btn-wrapper" *ngIf="!canEdit">
-        <button class="btn" (click)="canEdit=!canEdit">Edit</button>
+        <button class="btn btn-edit" (click)="canEdit=!canEdit">Edit</button>
         <button class="btn btn-delete" (click)="remove.emit()">Delete</button>
     </div>
 
@@ -12,7 +13,7 @@
             (keyup.enter)="saveItem(editedItem.value)">
 
         <div class="btn-wrapper">
-            <button class="btn" (click)="canEdit=!canEdit"> Cancel </button>
+            <button class="btn btn-cancel" (click)="canEdit=!canEdit"> Cancel </button>
             <button class="btn btn-save" (click)="saveItem(editedItem.value)">Save</button>
         </div>
     </div>
